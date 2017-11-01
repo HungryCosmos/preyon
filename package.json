@@ -1,6 +1,6 @@
 {
   "name": "preyon-2",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Configurable version of Preyon by @cmiscm which does not draw with points anymore |´• ‸ •`|",
   "main": "src/Preyon2.js",
   "scripts": {

@@ -1,4 +1,4 @@
-# preyon-2 [![Working Demo](https://img.shields.io/badge/demo-running-brightgreen.svg)](https://hungrycosmos.com/preyon-2) [![Rawgit](https://img.shields.io/badge/rawgit-v2.0.0-orange.svg)](https://cdn.rawgit.com/HungryCosmos/preyon-2/v2.0.0/dist/umd/Preyon2.min.js)
+# preyon-2 [![Working Demo](https://img.shields.io/badge/demo-running-brightgreen.svg)](https://hungrycosmos.com/preyon-2) [![Rawgit](https://img.shields.io/badge/rawgit-v2.0.1-orange.svg)](https://cdn.rawgit.com/HungryCosmos/preyon-2/v2.0.1/dist/umd/Preyon2.min.js)
 
 > Configurable version of Preyon by @cmiscm which does not draw with points anymore |´• ‸ •`|
 
@@ -18,7 +18,7 @@ configuration files. Both Preyon2 and Preyon developed and intended for _in-brow
 1. Download packaged [Preyon2.min.js](/dist/umd/Preyon2.min.js) (or other distribution from [repo](/dist))
 and load it with from local files, or use [rawgit](https://rawgit.com) at your own risk:  
    ```html
-   <script src="https://cdn.rawgit.com/HungryCosmos/preyon-2/v2.0.0/dist/umd/Preyon2.min.js"></script>
+   <script src="https://cdn.rawgit.com/HungryCosmos/preyon-2/v2.0.1/dist/umd/Preyon2.min.js"></script>
    ```
 2. Initialize `Preyon2` with required params in javascript:  
    ```html
@@ -39,7 +39,7 @@ and load it with from local files, or use [rawgit](https://rawgit.com) at your o
        </div>
           
        <!--loading this library-->
-       <script src="https://cdn.rawgit.com/HungryCosmos/preyon-2/v2.0.0/dist/umd/Preyon2.min.js"></script>
+       <script src="https://cdn.rawgit.com/HungryCosmos/preyon-2/v2.0.1/dist/umd/Preyon2.min.js"></script>
    
        <!--initialization-->
        <script>

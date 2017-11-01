@@ -2072,7 +2072,7 @@ module.exports = g;
  * - jaws are now opened right after closing and executing callback
  *
  *
- * VERSION: 2.0.0
+ * VERSION: 2.0.1
  * DATE: 1 Nov 2017
  * UPDATES AND DOCS AT: https://github.com/HungryCosmos/preyon-2
  *
