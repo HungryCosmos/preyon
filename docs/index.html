@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metadata-->
+    <title>HungryCosmos - Preyon2 demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no, shrink-to-fit=no">
+    <meta name="description" content="HungryCosmos - Bekzhan Baikatov is Almaty based Java / Node developer and designer" />
+    <meta name="keywords" content="HungryCosmos, Bekzhan Baikatov, java developer, node developer, fullstack developer, developer, programmer, designer"/>
+
+    <!--Dependencies-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:500" />
+    <link rel="stylesheet" type="text/css" href="./res/css/mixed.css" />
+
+    <!--Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../res/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../res/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../res/ico/favicon-16x16.png">
+    <link rel="manifest" href="../res/ico/manifest.json">
+    <link rel="mask-icon" href="../res/ico/safari-pinned-tab.svg" color="#11010d">
+    <link rel="shortcut icon" href="../res/ico/favicon.ico">
+    <meta name="msapplication-config" content="../res/ico/browserconfig.xml">
+    <meta name="theme-color" content="#11010d">
+</head>
+<body>
+    <!--MUST HAVE CANVAS TO DRAW-->
+    <canvas id="canvas"></canvas>
+
+    <!--content-->
+    <div id="content">
+        <div id="centered-cell">
+            <span id="useful-text"><a href='https://hungrycosmos.com'>Yum-Yum!</a></span>
+        </div>
+    </div>
+
+    <!--loading this library-->
+    <script src="https://cdn.rawgit.com/HungryCosmos/preyon-2/v2.0.0/dist/umd/Preyon2.min.js"></script>
+
+    <!--initialization-->
+    <script>
+        // First, we need to get references to canvas element and Preyon2 trigger:
+        var canvas = document.getElementById('canvas');
+        var chewTrigger = document.getElementById('content');
+
+        // Take a look at all possible options. You can change what you want right here, but we will skip it for now.
+        var DEFAULTS = {
+
+            // dom
+            canvas: null,
+            chewTrigger: null,
+            chewEvents: ['click'],
+            chewCallback: null,
+
+            // chew animation
+            lowerLimit: -1,
+            upperLimit: 1,
+            timeToCloseMouth: 0.8,
+            timeToOpenMouth: 2.0,
+
+            // teeth
+            toothW: 180,
+            toothH: 160,
+            teethTotal: 32,
+            toothMainColor: '#ffffff',
+            toothSecondaryColor: '#cccccc',
+
+            // jaws
+            innerMouthColor: 'transparent',
+            upperJawFillColor: '#000000',
+            upperJawStrokeColor: '#000000',
+            upperJawStrokeWidth: 0,
+            lowerJawFillColor: '#000000',
+            lowerJawStrokeColor: '#000000',
+            lowerJawStrokeWidth: 0
+        };
+
+        // These must be configured to make the library actually usable
+        DEFAULTS.canvas = canvas;
+        DEFAULTS.chewTrigger = chewTrigger;
+
+        // This is optional, in case we want to add additional event listener
+        DEFAULTS.chewEvents.push('wheel');
+
+        // Remember only to keep at least one element in chewEvents
+        DEFAULTS.chewEvents = ['click'];
+
+        // We can also specify a callback. It will be executed after mouth will get closed.
+        function usefulCallback() {
+            document.getElementById('useful-text').innerHTML = "So tasty! <a href=\"https://hungrycosmos.com\">Back for more?</a>";
+        }
+
+        // Let's style it a little bit
+        DEFAULTS.innerMouthColor = '#282828';
+        DEFAULTS.lowerLimit = 0.4;
+        DEFAULTS.toothW = 240;
+
+        // We can pack our custom config into separate object
+        var config = {
+            canvas: canvas,
+            chewTrigger: chewTrigger,
+            chewEvents: ['click', 'wheel'],
+            chewCallback: usefulCallback,
+            innerMouthColor: '#282828',
+            lowerLimit: 0.4,
+            toothW: 240
+        };
+
+        // And it will overwrite defaults. Note, RealtimeTime.init(DEFAULTS); will work as well
+        Preyon2.init(config);
+
+        // This lib uses .addEventListener() to manipulate callbacks
+        // More reading on events below
+        // https://developer.mozilla.org/en-US/docs/Web/Events
+    </script>
+</body>
+</html>

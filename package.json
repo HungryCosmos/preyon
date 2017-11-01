@@ -1,0 +1,32 @@
+{
+  "name": "preyon-2",
+  "version": "2.0.0",
+  "description": "Configurable version of Preyon by @cmiscm which does not draw with points anymore |´• ‸ •`|",
+  "main": "src/Preyon2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "npm-run-all --parallel build:*",
+    "build:umd": "webpack --output-filename Preyon2.js",
+    "build:umd.min": "webpack --output-filename Preyon2.min.js -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HungryCosmos/preyon-2.git"
+  },
+  "author": "HungryCosmos <hungrycosmos@protonmail.com> (https://hungrycosmos.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HungryCosmos/preyon-2/issues"
+  },
+  "homepage": "https://github.com/HungryCosmos/preyon-2#readme",
+  "dependencies": {
+    "gsap": "1.20.3",
+    "merge-json": "0.1.0-b.3"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.1",
+    "rimraf": "2.6.2",
+    "webpack": "3.8.1"
+  }
+}
